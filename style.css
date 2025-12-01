@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar with Flexbox */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.links a:hover {
+  color: white;
+  background-color: #001f3f; /* Dark blue background on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* OPTION 1: Video Background for Intro Section */
+#intro {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay to make text readable */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.intro-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* OPTION 2: Full Page Video Background (Alternative) */
+/* Uncomment this section if you want video behind entire page */
+/*
+.fullpage-video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.fullpage-video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -99;
+}
+*/
+
+/* Image Section */
+img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section with Grid */
+#my-projects {
+  padding: 3rem 2rem;
+  background-color: #f4f4f4;
+}
+
+#my-projects h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #667eea;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hobbies Section with Flexbox */
+#hob {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+#hob ul {
+  list-style: none;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+#hob ul li {
+  padding: 0.5rem 0;
+}
+
+#hob ul li strong {
+  color: #667eea;
+  font-size: 1.3rem;
+}
+
+/* Feedback Section */
+#feedback {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  background-color: #667eea;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: #5568d3;
+}
+
+input[type="reset"] {
+  background-color: #ccc;
+  color: #333;
+}
+
+input[type="reset"]:hover {
+  background-color: #999;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 1rem 0;
+  }
+
+  .links.active {
+    right: 0;
+  }
+
+  .links a {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #hob {
+    gap: 2rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2rem;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  nav h2 {
+    font-size: 1.2rem;
+  }
+
+  #hob {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  
