@@ -9,7 +9,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar with Flexbox */
+
 nav {
   background-color: #333;
   color: white;
@@ -113,48 +113,9 @@ nav h2 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* OPTION 2: Full Page Video Background (Alternative) */
-/* Uncomment this section if you want video behind entire page */
-/*
-.fullpage-video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -100;
-  overflow: hidden;
-}
 
-.fullpage-video-background video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
 
-body {
-  position: relative;
-}
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -99;
-}
-*/
-
-/* Image Section */
 img {
   display: block;
   margin: 2rem auto;
@@ -162,7 +123,7 @@ img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Projects Section with Grid */
+
 #my-projects {
   padding: 3rem 2rem;
   background-color: #f4f4f4;
@@ -196,7 +157,7 @@ img {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Hobbies Section with Flexbox */
+
 #hob {
   padding: 3rem 2rem;
   display: flex;
@@ -224,7 +185,7 @@ img {
   font-size: 1.3rem;
 }
 
-/* Feedback Section */
+
 #feedback {
   padding: 3rem 2rem;
   background-color: #f9f9f9;
@@ -278,7 +239,7 @@ input[type="reset"]:hover {
   background-color: #999;
 }
 
-/* Footer */
+
 footer {
   background-color: #333;
   color: white;
@@ -286,7 +247,7 @@ footer {
   padding: 2rem;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
